@@ -100,6 +100,7 @@ section img{
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
 }
 .work h2{
@@ -146,18 +147,41 @@ section img{
     height: auto;
 
 }
-.showcase{
+#showcase1{
     position: absolute;
-    top: -90px;
+    left: -120px;
+    top: -100px;
     transform: rotate(-10deg);
     width: 100%;
     height: auto;
-    border-color: #f997ff;
-    border-style:solid;
+    z-index: 0;
 }
-.showcase:nth-child(2) {
-    right: 0;
+#showcase2{
+    position: absolute;
+    top: -100px;
+    transform: rotate(4deg);
+    transform: translateX(150%);
+    width: 100%;
+    height: auto;
+}
+
+#showcase3{
+    position: absolute;
+    top: -100px;
+    transform: rotate(-10deg);
+    width: 50%;
+    height: 50%;
+    height: auto;
+    z-index: 0;
+}
+#showcase4{
+    position: absolute;
+    top: -100px;
+    right: 100px;
+    width: 50%;
+    height: 50%;
     transform: rotate(10deg);
+    height: auto;
 }
 
 hr{

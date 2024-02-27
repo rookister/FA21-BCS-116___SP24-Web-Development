@@ -65,8 +65,8 @@
                     publishing software like Aldus PageMaker 
                     including versions of Lorem Ipsum.</p>
             <div class="cards">
-                <img src="content/aEx1.png" class="showcase">
-                <img src="content/aEx2.png" class="showcase"> 
+                <img src="content/aEx2.png" id="showcase1">
+                <img src="content/aEx1.png" id="showcase2"> 
             </div>        
         </div>
         <h4>Coding</h4>
@@ -85,7 +85,10 @@
                     and more recently with desktop 
                     publishing software like Aldus PageMaker 
                     including versions of Lorem Ipsum.</p>
-            <img src="content/pfp.jpg" id="pfp"> 
+            <div class="cards">
+                <img src="content/proj2.gif" id="showcase3">
+                <img src="content/proj1.gif" id="showcase4"> 
+            </div>  
         </div>
     </div> <hr>
     <script>
@@ -95,6 +98,8 @@
         let m3 = document.getElementById('M3');
         let intro = document.getElementById('intro');
         let button = document.getElementById('button');
+        let sh1 = document.getElementById('showcase1');
+        let sh2 = document.getElementById('showcase2');
         window.addEventListener('scroll',function(){
             let value = window.scrollY;
             stars.style.left = value * -0.25 +'px';
@@ -103,6 +108,10 @@
             m1.style.top=value * -0.5 +'px';
             m2.style.top=value * -0.27 +'px';
             m3.style.top=value * -0.15 +'px';
+            sh1.style.top = value * -0.13 +'px';
+            sh1.style.opacity = 1.75 - (value / (document.body.scrollHeight - window.innerHeight));
+            sh2.style.opacity =  (value / (document.body.scrollHeight - window.innerHeight));
+            sh2.style.left = value * -0.37 +'px';
         })
     </script>
 </body>
