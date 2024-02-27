@@ -38,7 +38,7 @@ header ul li a:hover{
     
 }
 section{
-    background-image: linear-gradient(180deg, #6a18dc 0%, #f997ff 100%);
+    background-image: linear-gradient(180deg, #6a18dc 0%, #f997ff 60%, rgb(51, 10, 105) 80%);
     position: relative;
     width: 100%;
     height: 100vh;
@@ -57,7 +57,7 @@ section img{
 #intro{
     position: absolute;
     font: 4em sans-serif;
-    transform: translateY(220px);
+    transform: translateY(230px);
     
 }
 #button{
@@ -71,9 +71,46 @@ section img{
     z-index: 10;
 }
 .content{
-    padding: 100px;
+    padding: 200px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items:center;
+
 }
 .content h2{
-    font-size: 2.5em;
+    font-size: 2em;
+    color: #f997ff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content h3{
+    padding-bottom: 27px;
+}
+
+.content h4{
+    padding-bottom: 20px;
+    color: #f997ff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.contentInside p{
+    padding-right: 40px;
+    font-size: 0.95em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 10px;
+}
+#pfp{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    border-bottom-right-radius: 20px;
+    border-right-width: 3px;
+    border-color: #f997ff;
+    border-style:solid;
+    
+}
+hr{
+    width: 70% ;
+    border-color: #f997ff;
+    margin: auto;
 }
