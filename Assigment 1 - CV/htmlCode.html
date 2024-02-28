@@ -10,9 +10,9 @@
     <header>
         <ul>
             <li><a href="#"> Home </a></li>
-            <li><a href="#"> Work</a></li>
-            <li><a href="#"> Contact</a></li>
-            <li><a href="#"> GitHub</a></li>
+            <li><a href="#workID"> Work</a></li>
+            <li><a href="#contactID"> Contact</a></li>
+            <li><a href="https://github.com/rookister"> GitHub</a></li>
         </ul>
     </header>
     <section>
@@ -45,10 +45,13 @@
         </div>
         <img src="content/pfp.jpg" id="pfp"> 
     </div> <hr>
-
-    <div class="work">
+    <div class="work" id="workID">
         <h2>Work</h2>
-        <h4>Art</h4>
+        <div class="insta">
+            <h4>Art</h4>
+            <a href="https://www.instagram.com/rookister/">
+            <img src="content/inst.png" id="inst"></a>
+        </div>
         <div class="workInside">
                 <p>Lorem Ipsum is simply dummy text of the 
                     printing and typesetting industry. 
@@ -69,7 +72,11 @@
                 <img src="content/aEx1.png" id="showcase2"> 
             </div>        
         </div>
-        <h4>Coding</h4>
+        <div class="insta">
+            <h4>Coding</h4>
+            <a href="https://github.com/rookister/Art-Social-Flutter">
+            <img src="content/gint.png" id="inst"></a>
+        </div>
         <div class="workInside">
                 <p>Lorem Ipsum is simply dummy text of the 
                     printing and typesetting industry. 
@@ -91,6 +98,62 @@
             </div>  
         </div>
     </div> <hr>
+    <div class="qual">
+        <div class="workExperience">
+            <h2>Experience</h2>
+            <div class="experience">
+                <div class="comp">
+                    <div class="dateR">September 2022</div>
+                </div>
+                <div class="middle">
+                    <div class="point"></div>
+                </div>
+            <div class="bg">
+                    <h4>Joined Etheric Designs</h4>
+                    <p>Started as an Illustrator & Cover Designer.</p>
+            </div>  
+            <div class="bg2">
+                    <h4>Joined eXputer</h4>
+                    <p>Started as a Technical Troubleshooter Expert.</p>
+                </div>   
+                <div class="middle">
+                    <div class="point"></div>
+                    <div class="point finPoint"></div>
+                </div>
+                <div class="comp">
+                    <div class="dateL">August 2023</div>
+                </div>
+            </div>
+            <div class="comp">
+                <div class="finTime">Present</div>
+            </div>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <h5>Design</h5>
+                <div class="bar">
+                <div class="art S"></div></div>
+            </div>
+            <div class="skill">
+                <h5>Coding</h5>
+                <div class="bar">
+                <div class="coding S"></div></div>
+            </div>
+            <div class="skill">
+                <h5>Writing</h5>
+                <div class="bar">
+                <div class="writing S"></div></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="contact" id="contactID">
+        <h2>Contact</h2>
+        <div class="mail">
+        <h5>Email:</h5> 
+        <p> naeemmalik42069@gmail.com </p></div>
+    </div><hr>
     <script>
         let stars = document.getElementById('Stars');
         let m1 = document.getElementById('M1');
@@ -104,14 +167,14 @@
             let value = window.scrollY;
             stars.style.left = value * -0.25 +'px';
             intro.style.marginBottom = value * 2.5 +'px';
-            button.style.opacity = 1 - (value / (document.body.scrollHeight - window.innerHeight));
+            button.style.opacity = 1 - (value / (document.body.scrollHeight - 434));
             m1.style.top=value * -0.5 +'px';
             m2.style.top=value * -0.27 +'px';
             m3.style.top=value * -0.15 +'px';
             sh1.style.top = value * -0.13 +'px';
-            sh1.style.opacity = 1.75 - (value / (document.body.scrollHeight - window.innerHeight));
-            sh2.style.opacity =  (value / (document.body.scrollHeight - window.innerHeight));
-            sh2.style.left = value * -0.37 +'px';
+            sh1.style.opacity = 1.2 - (value / (document.body.scrollHeight - 434));
+            sh2.style.opacity =  (value / (document.body.scrollHeight - 434)) + 0.5;
+            sh2.style.left = value * -0.35 +'px';
         })
     </script>
 </body>
