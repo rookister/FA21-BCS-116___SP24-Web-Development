@@ -12,7 +12,7 @@ $(".owl-carousel").owlCarousel({
         450 : {
             items: 1,
         },
-        700 : {
+        850 : {
             items: 2,
         },
         1000 : {

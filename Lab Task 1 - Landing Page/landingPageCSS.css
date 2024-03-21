@@ -154,6 +154,10 @@ h4, p,
     }
 }
 
+.sideBars{
+    background-color: var(--bg-color);
+}
+
 .sectionTitle{
     color: var(--tColorLite);
     padding-bottom: 20px;
@@ -245,6 +249,14 @@ img{
 }
 
 .section-padding{
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.shadow-custom {
+    box-shadow: 0 6px 4px rgba(2, 10, 2, 0.5); /* Customize the shadow here */
+}
+
+.mainHero.shadow-custom2 {
+    box-shadow: 0 10px 4px rgba(3, 2, 10, 0.5); /* Customize the shadow here */
 }
