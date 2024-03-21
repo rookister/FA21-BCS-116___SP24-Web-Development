@@ -262,6 +262,7 @@ img{
 .footer{
     background-color: var(--bg-color);
 }
+
 .footerText{
     color: var(--tColor);
     font-family: var(--fontTitles);
@@ -315,4 +316,11 @@ img{
     font-family: var(--fontText);
     font-size: small;
     color: var(--tColor); 
+}
+
+.labelTitle{
+    font-family: var(--fontTitles);
+    font-size:xx-large;
+    font-weight: 300;
+    
 }
