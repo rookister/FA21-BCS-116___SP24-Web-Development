@@ -1,0 +1,97 @@
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+  }
+
+.head{
+    background-color: #c60800;
+    border-bottom: 20px solid black;
+}
+
+.headerIcon{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+
+.headerButton{
+    font-size: 12px;
+    margin-right: 8px;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.headerButton:hover{
+    color: black;
+    background-color: white;
+    border-radius: 999px;
+}
+
+.headerButtonL{
+    color: black;
+    background-color: white;
+    border-radius: 999px;
+}
+
+.banner{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #ffd62b;
+}
+
+.bannerTitle{
+    background-color: black;
+    height: 40px;
+}
+
+.bannerTitle h4{
+    color: white;
+    font-weight: bold;
+    font-size:larger;
+}
+
+.banner p{
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.sideBars{
+    background-color: rgb(255, 255, 255);
+}
+
+.sideArticles{
+    background-color: rgb(255, 255, 255);
+}
+
+.mainArticles h1{
+    color: red;
+    font-weight: bold;
+}
+
+.mainArticles h2{
+    font-weight: bold;
+    font-size:xx-large;
+}
+
+.mainArticles p{
+    padding-top: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+.mainArticles h3{
+    padding-top: 20px;
+    font-weight: 400;
+    font-size:medium;
+    padding-bottom: 20px;
+}
+
+.heroImg{
+    max-width:744px;
+    max-height: 496px;
+}
