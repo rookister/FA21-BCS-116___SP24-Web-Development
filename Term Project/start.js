@@ -6,7 +6,6 @@ app.set("view engine", "ejs");
 app.use(ejsLayouts);
 app.use(express.static("public"));
 
-
 app.get("/", (request, response) => {
     response.render("landingPage", {title: "rOOk - Catch Up With The Happenings!"});
 });
@@ -14,7 +13,6 @@ app.get("/", (request, response) => {
 app.get("/contact-us", (request, response) => {
     response.status(201).send({msg: "Hello World"});
 });
-
 
 const port = process.env.port || 3000 //Environment Variable
 app.listen(port, () => {
