@@ -23,32 +23,3 @@ $(".owl-carousel").owlCarousel({
         }
     }
 });
-
-window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var heroHeight = document.getElementById('hero').offsetHeight;
-    var latestHeight = document.getElementById('latestSection').offsetHeight;
-    var animeOffset = document.getElementById('animeSection').offsetTop - heroHeight + latestHeight; 
-    var gamingOffset = document.getElementById('gamingSection').offsetTop - heroHeight + latestHeight;
-
-    if (scrollPosition >= 0 && scrollPosition <= animeOffset) {
-        setActiveLink('nav-link-home');
-    } else if (scrollPosition >= animeOffset && scrollPosition <= gamingOffset) {
-        setActiveLink('nav-link-anime');
-    } else if (scrollPosition >= gamingOffset) {
-        setActiveLink('nav-link-gaming');
-    }
-});
-
-function setActiveLink(linkId) {
-    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(function(link) {
-        link.classList.remove('active');
-    });
-
-    var activeLink = document.getElementById(linkId);
-    if (activeLink) {
-        activeLink.classList.add('active');
-    }
-}
-

@@ -1,0 +1,55 @@
+  <section id="contact" class="section-padding mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+          <div class="section-title">
+            <h1 class="display-4 text-white fw-semibold">Contact Us</h1>
+            <div class="line"></div>
+            <p class="mt-10">Submit your Feedbacks or Requests here!</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
+        <div class="col-lg-8">
+            <form id="contactForm" class="row g-3 p-lg-5 p-4 bg-transparent theme-shadow">
+                <div class="form-group col-lg-6">
+                    <input id="fName" type="text" class="form-control" placeholder="Enter First Name" required>
+                </div>
+                <div class="form-group col-lg-6">
+                    <input id="lName" type="text" class="form-control" placeholder="Enter Last Name" required>
+                </div>
+                <div class="form-group col-lg-12">
+                    <input id="email" type="email" class="form-control" placeholder="Enter Email Address" required>
+                </div>
+                <div class="form-group col-lg-12">
+                    <input id="sub" type="text" class="form-control" placeholder="Enter Subject" required>
+                </div>
+                <div class="form-group col-lg-12">
+                    <textarea id="mes" name="message" rows="5" class="form-control" placeholder="Enter Message" required></textarea>
+                </div>
+                <div class="form-group col-lg-12 d-grid">
+                    <button id="sButton" class="mt-2 btn btn-lg btn-outline-dark">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Message Sent!</h5>
+          <button type="button" class="btn-close text" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Your message has been sent successfully.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/contactScript.js"></script>
+</body>
+</html>

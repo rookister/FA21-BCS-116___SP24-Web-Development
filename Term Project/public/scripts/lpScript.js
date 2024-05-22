@@ -1,54 +1,30 @@
-$(".owl-carousel").owlCarousel({
-    autoplay: true,
-    autoplayhoverpause: true,
-    autoplaytimeout: 2000,
-    loop: true,
-    items: 3,
-    lazyload: true,
-    margin: 5,
-    padding: 5,
-    stagePadding: 5,
-    responsive: {
-        450 : {
-            items: 1,
-        },
-        850 : {
-            items: 2,
-        },
-        1000 : {
-            items: 3,
-        },
-        1400 : {
-            items: 4,
+$(document).ready(function(){
+    $(".owl-carousel").each(function() {
+      var itemsToShow = $(this).data('items');
+      $(this).owlCarousel({
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 2000,
+        loop: true,
+        items: itemsToShow,
+        margin: 0,
+        padding: 0,
+        stagePadding: 0,
+        lazyLoad: true,
+        nav: false,
+        responsive: {
+          0: { 
+            items: 1},
+          450: { 
+            items: 1 },
+          850: { 
+            items: (itemsToShow > 1) ? 2 : 1 },
+          1000: { 
+            items: (itemsToShow > 1) ? 3 : 1 },
+          1400: { 
+            items: (itemsToShow > 1) ? 4 : 1 }
         }
-    }
-});
-
-window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var heroHeight = document.getElementById('hero').offsetHeight;
-    var latestHeight = document.getElementById('latestSection').offsetHeight;
-    var animeOffset = document.getElementById('animeSection').offsetTop - heroHeight + latestHeight; 
-    var gamingOffset = document.getElementById('gamingSection').offsetTop - heroHeight + latestHeight;
-
-    if (scrollPosition >= 0 && scrollPosition <= animeOffset) {
-        setActiveLink('nav-link-home');
-    } else if (scrollPosition >= animeOffset && scrollPosition <= gamingOffset) {
-        setActiveLink('nav-link-anime');
-    } else if (scrollPosition >= gamingOffset) {
-        setActiveLink('nav-link-gaming');
-    }
-});
-
-function setActiveLink(linkId) {
-    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(function(link) {
-        link.classList.remove('active');
+      });
     });
-
-    var activeLink = document.getElementById(linkId);
-    if (activeLink) {
-        activeLink.classList.add('active');
-    }
-}
-
+  });
+  
