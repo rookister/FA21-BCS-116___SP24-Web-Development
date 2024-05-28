@@ -31,14 +31,14 @@
                     <div class="articleIntro position-relative d-flex">
                         <img src="<%= article.featuredImage %>" class="position-absolute z-n1 articleBG">
                         <div class="introContainer d-flex flex-column justify-content-end">
-                            <h1 class="introArticle display-4 fw-semibold mb-3 <%= article.category === 'Games' ? 'introArticleG' : 'introArticleA' %>"><%= article.title %></h1>
+                            <h1 class="introArticle display-5 fw-semibold mb-3"><%= article.title %></h1>
                             <p class="subArticle"><%= article.subtitle %></p>
                         </div>
                     </div>
                     <hr>
                     <div class="articleText p-4">
                         <% article.body.forEach(paragraph => { %>
-                            <p class="articlePara mt-3"><%= paragraph %></p>
+                            <p class="articlePara mt-4"><%= paragraph %></p>
                         <% }); %>
                     </div>
                 </div>                

@@ -43,7 +43,7 @@
                             <img src="<%= article.featuredImage %>" class="imgCard">
                         </div>
                         <div class="col-7">
-                            <a href="#" class="title"><%= article.title %></a>
+                            <a href="/<%= article.category %>/articles/<%= article._id %>" class="title"><%= article.title %></a>
                             <p class="subIntro mt-3"><%= article.subtitle %></p>
                             <p class="subIntro mt-4 fw-light">Category: <%= article.category %></p>
                             <div class="mt-4">
