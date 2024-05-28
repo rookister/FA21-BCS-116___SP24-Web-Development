@@ -1,0 +1,52 @@
+<section class="mainBody" >
+    
+    <div class="container-fluid" >
+      <div class="row" style="min-height: 77.5%;">
+
+        <div class="col-lg-1 sideBars">
+        </div>
+        <div class="col-lg-10">
+            <div class="row mt-5 justify-content-center"> 
+                <div class="col-lg-10">
+                    <div class="pageIntro">
+                        <h2 class="searchIntro display-4 fw-semibold mb-3">Search</h2>
+                        <p class="subIntro">Searched Term: <%= searchQuery %></p>
+                        <hr class="color-light mt-5">
+                    </div>
+        
+                    <div class="paginationButtons">
+                        <% for (let index = 1; index <= totalPages; index++) { %>
+                            <% if (index === page || (index >= page - 2 && index <= page + 2) || index === totalPages) { %>
+                                <div class="pageinationBEnc">
+                                    <a href="/search/<%= index %>?search=<%= searchQuery %>" class="pageinationB<%= index == page ? ' BActive' : '' %>"><%= index %></a>
+                                </div>
+                            <% } else if (index === page - 3 || index === page + 3) { %>
+                                <div class="pageinationBEnc">
+                                    <a href="#" class="pageinationB"><...></a>
+                                </div>
+                            <% } %>
+                        <% } %>
+                    </div>                        
+        
+                    <% Articles.forEach(article => { %>
+                        <div class="pageCard row ms-1 me-1">
+                            <div class="col-5">
+                                <img src="<%= article.featuredImage %>" class="imgCard">
+                            </div>
+                            <div class="col-7">
+                                <a href="/<%= article.category %>/articles/<%= article._id %>" class="title"><%= article.title %></a>
+                                <p class="subIntro mt-3"><%= article.subtitle %></p>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>     
+            </div>
+        </div>        
+
+        <div class="col-lg-1 sideBars">
+        </div>
+
+      </div>
+
+  </div>
+  </section>

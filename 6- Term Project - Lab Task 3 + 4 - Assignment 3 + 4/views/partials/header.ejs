@@ -1,0 +1,56 @@
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark navbar-custom">
+    <div class="container">
+      <a class="navbar-brand me-5" href="/">
+        <img src="../../assets/alt-logo.gif" width="115" height="30">
+      </a>
+
+      <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item px-3">
+            <a class="nav-link <%= active === 'Home' ? 'active' : '' %>" href="/">Home</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link <%= active === 'Anime' ? 'active' : '' %>" href="/Anime">Anime</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link <%= active === 'Gaming' ? 'active' : '' %>" href="/Games">Gaming</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link <%= active === 'Contact' ? 'active' : '' %>" href="/contact-us">Contact</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link <%= active === 'API' ? 'active' : '' %>" href="/example-api">API</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+        <ul class="navbar-nav ms-md-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="<%= (signIn) ? '/admin/all-articles' : '/signing-in/login' %>">
+              <i class="<%= (signIn) ? 'bi bi-door-open-fill' : 'bi-box-arrow-in-right' %>" style="font-size: 2rem;"></i>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+            </li>
+        </ul>
+        <form class="d-flex mt-4 px-3" action="/search" method="GET">
+          <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit"> Search </button>
+        </form>      
+      </div>
+
+    </div>
+  </nav>

@@ -1,0 +1,73 @@
+<section class="mainBody">
+    
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-lg-1 sideBars">
+        </div>
+
+        <div class="col-lg-10">
+
+              <div class="row mt-5">
+
+                <div class="col-lg-4 text-center latestSideSection">
+                    <h2 class="subSection display-6 mb-3">Latest</h2>
+
+                    <% latestArticles.forEach(article => { %>
+                      <div class="latestCard row ms-1 me-1">
+                        <div class="col-4">
+                          <img src="<%= article.featuredImage %>" class="imgCard latestSectionImg">
+                        </div>
+                        <div class="col-8 text-start">
+                          <a href="/<%= article.category %>/articles/<%= article._id %>" class="title"><%= article.title %></a>
+                        </div>
+                      </div>
+                    <% }); %>                    
+
+                </div>
+
+                <div class="col-lg-8">
+                        <div class="pageIntro">
+                          <h2 class="intro display-4 fw-semibold mb-3">Anime</h2>
+                          <p class="subIntro">The anime industry can be hard to keep up with, but at rOOk, we dedicate ourselves to bringing you the latest anime news on a round-the-clock basis—fact-checked and thoroughly proof-read.</p>
+                          <hr class="color-light mt-5">
+                        </div>
+
+                        <div class="paginationButtons">
+                          <% for (let index = 1; index <= totalPages; index++) { %>
+                              <% if (index === page || (index >= page - 2 && index <= page + 2) || index === totalPages) { %>
+                                  <div class="pageinationBEnc">
+                                      <a href="/Anime/<%= index %>" class="pageinationB<%= index == page ? ' BActive' : '' %>"><%= index %></a>
+                                  </div>
+                              <% } else if (index === page - 3 || index === page + 3) { %>
+                                  <div class="pageinationBEnc">
+                                      <a href="#" class="pageinationB"><...></a>
+                                  </div>
+                              <% } %>
+                          <% } %>
+                      </div>   
+                      
+                      <% animeArticles.forEach(article => { %>
+                        <div class="pageCard row ms-1 me-1">
+                          <div class="col-5">
+                            <img src="<%= article.featuredImage %>" class="animeImgCard">
+                          </div>
+                          <div class="col-7">
+                            <a href="/<%= article.category %>/articles/<%= article._id %>" class="title animeT"><%= article.title %></a>
+                            <p class="subIntro mt-3"><%= article.subtitle %></p>
+                          </div>
+                        </div>
+                      <% }); %>                      
+
+              </div>
+                
+            </div>
+        </div>
+
+        <div class="col-lg-1 sideBars">
+        </div>
+
+      </div>
+
+  </div>
+  </section>
