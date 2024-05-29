@@ -1,0 +1,38 @@
+<section class="mainBody">
+    
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-lg-1 sideBars">
+        </div>
+
+        <div class="col-lg-10">
+
+              <div class="row mt-5">
+
+                <div class="col-lg-12">
+                    <div class="articleIntro position-relative d-flex">
+                        <img src="../assets/noPicture.png" class="position-absolute z-n1 articleBG">
+                        <div class="introContainer d-flex flex-column justify-content-end">
+                            <h1 class="introArticle display-5 fw-semibold mb-3"><%= product.name %></h1>
+                            <p class="subArticle"><%= product.price %></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="articleText p-4">
+                            <p class="articlePara mt-4"><%= product.description %></p>
+                            <p class="articlePara mt-4">Featured: <%= product.isFeatured %></p>
+                            <p class="articlePara mt-4"><%= product.postTime %></p>
+                    </div>
+                </div>                
+                
+            </div>
+        </div>
+
+        <div class="col-lg-1 sideBars">
+        </div>
+
+      </div>
+
+  </div>
+  </section>

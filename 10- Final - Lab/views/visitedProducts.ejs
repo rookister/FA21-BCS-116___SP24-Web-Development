@@ -1,0 +1,30 @@
+<section class="mainBody" >
+    
+    <div class="container-fluid" >
+      <div class="row" style="min-height: 77.5%;">
+
+        <div class="col-lg-1 sideBars">
+        </div>
+        <div class="col-lg-10">
+            <div class="row mt-5 justify-content-center"> 
+                <div class="col-lg-10">
+                    <div class="pageIntro">
+                        <h2 class="searchIntro display-4 fw-semibold mb-3">Visited Products</h2>
+                        <% if(products) {%>
+                            <% products.forEach(productID => { %>
+                                <p class="subIntro">Product ID: <%= productID %></p>
+                            <% }); %>
+                        <% } %>
+                        <hr class="color-light mt-5">
+                    </div>                      
+                </div>     
+            </div>
+        </div>        
+
+        <div class="col-lg-1 sideBars">
+        </div>
+
+      </div>
+
+  </div>
+  </section>

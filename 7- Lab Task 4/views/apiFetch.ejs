@@ -1,0 +1,26 @@
+   <div class="container mt-5">
+        <h1 class="mb-4 display-1">AJAX CRUD Operations</h2>
+        <div class="row">
+            <div class="col lg-6">
+                <form id="createForm">
+                    <div class="form-group">
+                        <label class="mt-4 labelTitle" for="createTitle mt-4">Title</label>
+                        <input type="text" class="form-control mt-4" id="createTitle" required value="Enter a New Title.">
+                    </div>
+                    <div class="form-group">
+                        <label class= "mt-4 labelTitle" for="createContent">Content</label>
+                        <textarea class="form-control mt-4" id="createContent" rows="3" required>Enter some Story.</textarea>
+                    </div>
+                    <button id="createBtn" type="submit" class="mt-4 btn btn-lg btn-outline-dark">Create</button>
+                    <button id="clearBtn" type="submit" class="mt-4 btn btn-lg btn-outline-dark" style="display: none;">Clear</button>
+                </form>
+                <div class="line"></div>
+            </div>
+            <div class="col lg-6">
+                <div id="storiesList">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/apiScript.js"></script>

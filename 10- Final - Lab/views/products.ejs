@@ -1,0 +1,39 @@
+<section class="mainBody" >
+    
+    <div class="container-fluid" >
+      <div class="row" style="min-height: 77.5%;">
+
+        <div class="col-lg-1 sideBars">
+        </div>
+        <div class="col-lg-10">
+            <div class="row mt-5 justify-content-center"> 
+                <div class="col-lg-10">
+                    <div class="pageIntro">
+                        <h2 class="searchIntro display-4 fw-semibold mb-3">Products</h2>
+                        <hr class="color-light mt-5">
+                    </div>
+                              
+                    <% products.forEach(product => { %>
+                        <div class="pageCard row ms-1 me-1">
+                            <div class="col-5">
+                                <img src="../assets/noPicture.png" class="imgCard">
+                            </div>
+                            <div class="col-7">
+                                <a href="/products/<%= product._id%>" class="title"><%= product.name %></a>
+                                <p class="subIntro mt-3"><%= product.description %></p>
+                                <p class="subIntro mt-5"><%= product.category %></p>
+                                <p class="subIntro mt-3"><%= product.price %></p>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>     
+            </div>
+        </div>        
+
+        <div class="col-lg-1 sideBars">
+        </div>
+
+      </div>
+
+  </div>
+  </section>

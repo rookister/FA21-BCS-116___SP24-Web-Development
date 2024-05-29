@@ -1,0 +1,101 @@
+<section id="allArticles" class="section-padding mb-5">
+    <div class="container ">
+      <div class="row">
+        <div class="col-12" data-aos="fade-down" data-aos-delay="150">
+          <div class="section-title">
+            <h1 class="display-4 text-white fw-semibold">All Published Articles</h1>
+            <hr>
+            <div id="successMessage" class="alert alert-success" style="display: none;">
+              Article Deleted Successfully!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" data-aos="fade-down" data-aos-delay="250">
+        <div class="col-12">
+          <form class="mt-4 px-3" action="/admin/all-articles" method="GET">
+              <div class="form-group">
+                <label class="form-check-label" for="category">Category:</label>
+                <div class="form-check form-check-inline spacingRadio3">
+                  <input class="form-check-input" type="radio" name="category" id="animeCategory" value="Anime">
+                  <label class="form-check-label" for="animeCategory">Anime</label>
+                </div>
+                <div class="form-check form-check-inline ml-5 spacingRadio2">
+                  <input class="form-check-input" type="radio" name="category" id="gameCategory" value="Games">
+                  <label class="form-check-label" for="gameCategory">Games</label>
+                </div>
+              </div>
+              <div class="form-group d-flex mt-4">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
+              </div>
+            </form>
+            
+        </div>
+      </div>
+      
+      <div class="row">
+        <% if (articles.length > 0) { %>
+            <% articles.forEach(function(article) { %>
+                <div class="col-6">
+                    <div class="pageCard row ms-1 me-1">
+                        <div class="col-5">
+                            <img src="<%= article.featuredImage %>" class="imgCard">
+                        </div>
+                        <div class="col-7">
+                            <a href="/<%= article.category %>/articles/<%= article._id %>" class="title"><%= article.title %></a>
+                            <p class="subIntro mt-3"><%= article.subtitle %></p>
+                            <p class="subIntro mt-4 fw-light">Category: <%= article.category %></p>
+                            <div class="mt-4">
+                                <form action="/admin/edit-article/<%= article._id %>" method="GET" class="d-inline">
+                                    <button type="submit" class="btn btn-outline-dark editB btn-sm me-2">Edit</button>
+                                </form>
+                                <form action="/admin-api/article/<%= article._id %>/delete" method="POST" class="d-inline" onsubmit="
+                                return confirm('Are you sure you want to delete this article?');">
+                                    <button type="submit" class="btn btn-outline-dark editB btn-sm">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <div class="col-12 text-center">
+                <h1 class="mt-5">No articles found.</h1>
+            </div>
+        <% } %>
+      </div>
+      
+  
+    </div>
+  </section>
+  
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const messageElement = document.getElementById('successMessage');
+        if (urlParams.has('success')) {
+          if (urlParams.get('success') === 'true') {
+            messageElement.classList.add('article-upload-success');
+            messageElement.style.display = 'block';
+          }
+          else if (urlParams.get('success') === 'false') {
+            messageElement.textContent = `Article Deletion Failed!`;
+            messageElement.classList.add('article-upload-fail');
+            messageElement.style.display = 'block';
+          }
+        }
+        if (urlParams.has('successfullUpdate')) {
+          if (urlParams.get('successfullUpdate') === 'true') {
+            messageElement.textContent = `Article Updation Successfull!`;
+            messageElement.classList.add('article-upload-success');
+            messageElement.style.display = 'block';
+          }
+          else if (urlParams.get('successfullUpdate') === 'false') {
+            messageElement.textContent = `Article Updation Failed!`;
+            messageElement.classList.add('article-upload-fail');
+            messageElement.style.display = 'block';
+          }
+        }
+    });
+</script>

@@ -1,0 +1,25 @@
+GET http://localhost:3000/anime-news
+
+###
+
+POST http://localhost:3000/signing-in/register
+Content-Type: application/json
+
+{
+    "username": "naeem",
+    "password": "1234",
+    "roles": ["admin"]
+}
+
+###
+
+POST http://localhost:3000/products/add-product
+Content-Type: application/json
+
+{
+    "name": "Product 18",
+    "description": "This is Product 13",
+    "price": "100",
+    "category": "Others",
+    "isFeatured": "true"
+}

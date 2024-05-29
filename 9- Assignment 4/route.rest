@@ -1,0 +1,12 @@
+GET http://localhost:3000/anime-news
+
+###
+
+POST http://localhost:3000/signing-in/register
+Content-Type: application/json
+
+{
+    "username": "naeem",
+    "password": "1234",
+    "roles": ["admin"]
+}
